@@ -1,22 +1,154 @@
 aid: leap-motion
 name: Leap Motion
-description: Leap Motion is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Leap Motion is the hand-tracking company behind the Leap Motion Controller.
+  It merged with Ultrahaptics in 2019 to form Ultraleap, and the Leap Motion brand
+  now continues as Ultraleap''s hardware line (Leap Motion Controller 2) and as the
+  "Leap" naming across the tracking SDK. The developer surface is not a hosted web
+  API: it is LeapC, a native C API that connects a local client to the Ultraleap Hand
+  Tracking Service and delivers tracked hands, digits, bones, images and device events
+  as polled messages, plus first-party plugins for Unity, Unreal, OpenXR and Python.
+  The original leapmotion.com and developer.leapmotion.com domains no longer resolve;
+  docs.ultraleap.com and github.com/ultraleap are the live developer surfaces.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/51484212?v=4
 url: https://raw.githubusercontent.com/api-evangelist/leap-motion/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - a16z
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-successor: Ultraleap
+x-successor-url: https://www.ultraleap.com/
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Hand Tracking
+- Computer Vision
+- Spatial Computing
+- Augmented Reality
+- Virtual Reality
+- XR
+- Gesture Recognition
+- SDK
+- Hardware
+- Human Computer Interaction
+- OpenXR
+apis:
+- aid: leap-motion:leapc-tracking-api
+  name: LeapC Tracking API
+  description: 'LeapC is the native C API for Ultraleap / Leap Motion hand tracking.
+    A client opens a LEAP_CONNECTION to the locally running Ultraleap Hand Tracking
+    Service and drives a message pump with LeapPollConnection(), receiving tracking
+    events (LEAP_TRACKING_EVENT with LEAP_HAND / LEAP_PALM / LEAP_DIGIT / LEAP_BONE),
+    device events, image frames, policy and configuration responses. It is the layer
+    the Unity, Unreal, OpenXR and Python bindings are built on. There is no hosted
+    HTTP base URL — the transport is local IPC to the tracking service.'
+  humanURL: https://docs.ultraleap.com/api-reference/tracking-api/index.html
+  tags:
+  - Hand Tracking
+  - Native API
+  - C
+  properties:
+  - type: Documentation
+    url: https://docs.ultraleap.com/api-reference/tracking-api/leapc-guide.html
+  - type: APIReference
+    url: https://docs.ultraleap.com/api-reference/tracking-api/api-reference.html
+  - type: Examples
+    url: https://docs.ultraleap.com/api-reference/tracking-api/examples.html
+  - type: ErrorCatalog
+    url: errors/leap-motion-error-codes.yml
+  - type: DataModel
+    url: data-model/leap-motion-data-model.yml
+  - type: Conventions
+    url: conventions/leap-motion-conventions.yml
+- aid: leap-motion:tracking-websocket
+  name: Ultraleap Tracking WebSocket
+  description: 'An open-source WebSocket server from Ultraleap that restores the LeapJS-compatible
+    websocket surface removed when Leap Motion Orion V4 was replaced by Ultraleap Gemini
+    V5. It streams tracking data over the legacy LeapJS "v6" JSON protocol so browser
+    applications can consume hand tracking. It runs locally alongside the tracking
+    service; the endpoint is a loopback WebSocket, not a hosted API.'
+  humanURL: https://github.com/ultraleap/UltraleapTrackingWebSocket
+  tags:
+  - WebSocket
+  - Streaming
+  - Browser
+  properties:
+  - type: SourceCode
+    url: https://github.com/ultraleap/UltraleapTrackingWebSocket
+  - type: Documentation
+    url: https://github.com/ultraleap/UltraleapTrackingWebSocket/blob/main/README.md
+common:
+- type: DomainSecurity
+  url: security/leap-motion-domain-security.yml
+- type: Website
+  url: https://www.ultraleap.com/
+- type: DeveloperPortal
+  url: https://docs.ultraleap.com/
+- type: Documentation
+  url: https://docs.ultraleap.com/hand-tracking/index.html
+- type: APIReference
+  url: https://docs.ultraleap.com/api-reference/tracking-api/index.html
+- type: GettingStarted
+  url: https://docs.ultraleap.com/hand-tracking/getting-started.html
+- type: Downloads
+  url: https://www.ultraleap.com/downloads/
+- type: Products
+  url: https://www.ultraleap.com/products/
+- type: Blog
+  url: https://docs.ultraleap.com/ultralab/index.html
+- type: GitHubOrganization
+  url: https://github.com/ultraleap
+- type: Support
+  url: https://www.ultraleap.com/contact/
+- type: Community
+  url: https://discord.com/invite/3VCndThqxS
+- type: TermsOfService
+  url: https://www.ultraleap.com/legal/ultraleap-ltd-terms-conditions-of-business/
+- type: PrivacyPolicy
+  url: https://www.ultraleap.com/legal/privacy-policy/
+- type: License
+  url: https://www.ultraleap.com/legal/
+- type: Compliance
+  url: https://www.ultraleap.com/legal/
+- type: ChangeLog
+  url: https://docs.ultraleap.com/openxr/changelog/index.html
+- type: Packages
+  url: packages/leap-motion-packages.yml
+- type: SDKs
+  url: packages/leap-motion-packages.yml
+- type: Conformance
+  url: conformance/leap-motion-conformance.yml
+- type: ErrorCatalog
+  url: errors/leap-motion-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/leap-motion-lifecycle.yml
+- type: Conventions
+  url: conventions/leap-motion-conventions.yml
+- type: DataModel
+  url: data-model/leap-motion-data-model.yml
+- type: Components
+  url: components/leap-motion-components.yml
+- type: LLMsTxt
+  url: llms/leap-motion-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1
