@@ -1,0 +1,60 @@
+generated: '2026-07-19'
+method: probed
+source: live HTTP probe 2026-07-19
+notes: >-
+  No /.well-known/ discovery surface is published on any Leap Motion / Ultraleap
+  host. The original leapmotion.com and developer.leapmotion.com domains no
+  longer resolve in DNS at all. docs.ultraleap.com returns 403 to non-browser
+  clients for every probed path (bot filtering), so absence there is unconfirmed
+  rather than proven. Recorded as an honest negative result; no WellKnown
+  pointer is wired in apis.yml because no document was found.
+hosts:
+- host: leapmotion.com
+  status: NXDOMAIN
+- host: developer.leapmotion.com
+  status: NXDOMAIN
+- host: ultraleap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /robots.txt
+    status: 404
+- host: docs.ultraleap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /llms.txt
+    status: 403
+- host: leap2.ultraleap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+documents: []

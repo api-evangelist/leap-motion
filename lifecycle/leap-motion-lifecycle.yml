@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.ultraleap.com/ + https://github.com/ultraleap (UnityPlugin,
+  UltraleapTrackingWebSocket, leapc-python-bindings) + apis.yml
+notes: >-
+  The Leap Motion developer surface is a locally-installed native SDK/service, so
+  "versioning" is software/service release versioning of the Ultraleap Hand
+  Tracking Software, not a hosted API version path. The major generational shift
+  was Leap Motion Orion V4 to Ultraleap Gemini V5, which removed the legacy LeapJS
+  WebSocket surface (later partially restored by the open-source
+  UltraleapTrackingWebSocket). The Leap Motion Controller 2 hardware continues
+  under the Ultraleap brand.
+versioning:
+  scheme: software-release
+  generations:
+  - name: Orion
+    major: V4
+    status: superseded
+    note: Legacy Leap Motion tracking; shipped the LeapJS WebSocket protocol (leapjs).
+  - name: Gemini
+    major: V5
+    status: current
+    note: Current Ultraleap Hand Tracking Software; LeapC + engine plugins. Python bindings require 5.17+.
+  docs: https://docs.ultraleap.com/hand-tracking/index.html
+deprecation:
+  policy_url: https://docs.ultraleap.com/hand-tracking/index.html
+  sunset_header: false
+  deprecated_surfaces:
+  - surface: LeapJS WebSocket protocol
+    package: leapjs
+    status: removed-in-gemini-v5
+    replacement: https://github.com/ultraleap/UltraleapTrackingWebSocket
+  - surface: leapmotion.com / developer.leapmotion.com
+    status: retired
+    note: Original domains no longer resolve; docs.ultraleap.com is the live surface.
+support:
+  contact: https://www.ultraleap.com/contact/
+  community: https://discord.com/invite/3VCndThqxS
+status_page: null
+sla: null
+changelog:
+  openxr: https://docs.ultraleap.com/openxr/changelog/index.html

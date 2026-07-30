@@ -1,0 +1,37 @@
+# Leap Motion (Ultraleap)
+
+> Leap Motion is the hand-tracking company behind the Leap Motion Controller. It merged with Ultrahaptics in 2019 to form Ultraleap; the Leap Motion brand continues as Ultraleap's hardware line (Leap Motion Controller 2) and the "Leap" naming across the tracking SDK. The developer surface is not a hosted web API — it is LeapC, a native C API that connects a local client to the Ultraleap Hand Tracking Service and delivers tracked hands, digits, bones, images and device events as polled messages, plus first-party plugins for Unity, Unreal, OpenXR and Python.
+
+## APIs
+- [LeapC Tracking API](https://docs.ultraleap.com/api-reference/tracking-api/index.html): Native C API; open a LEAP_CONNECTION to the local Hand Tracking Service and drive a poll loop for tracking/device/policy/config/image events.
+- [Ultraleap Tracking WebSocket](https://github.com/ultraleap/UltraleapTrackingWebSocket): Open-source loopback WebSocket restoring the legacy LeapJS "v6" JSON protocol for browsers.
+
+## Docs
+- [Hand Tracking overview](https://docs.ultraleap.com/hand-tracking/index.html)
+- [Getting started](https://docs.ultraleap.com/hand-tracking/getting-started.html)
+- [LeapC guide](https://docs.ultraleap.com/api-reference/tracking-api/leapc-guide.html)
+- [API reference](https://docs.ultraleap.com/api-reference/tracking-api/api-reference.html)
+- [Examples](https://docs.ultraleap.com/api-reference/tracking-api/examples.html)
+- [OpenXR changelog](https://docs.ultraleap.com/openxr/changelog/index.html)
+
+## Packages
+- [Unity plugin (com.ultraleap.tracking)](https://openupm.com/packages/com.ultraleap.tracking/): openupm add com.ultraleap.tracking
+- [Unreal plugin](https://github.com/ultraleap/UnrealPlugin)
+- [Python bindings (leapc-python-bindings)](https://github.com/ultraleap/leapc-python-bindings)
+- [leapjs (legacy JS)](https://www.npmjs.com/package/leapjs)
+
+## Artifacts
+- [Packages / SDKs](https://raw.githubusercontent.com/api-evangelist/leap-motion/refs/heads/main/packages/leap-motion-packages.yml)
+- [Error codes (eLeapRS)](https://raw.githubusercontent.com/api-evangelist/leap-motion/refs/heads/main/errors/leap-motion-error-codes.yml)
+- [Data model](https://raw.githubusercontent.com/api-evangelist/leap-motion/refs/heads/main/data-model/leap-motion-data-model.yml)
+- [Conventions](https://raw.githubusercontent.com/api-evangelist/leap-motion/refs/heads/main/conventions/leap-motion-conventions.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/leap-motion/refs/heads/main/lifecycle/leap-motion-lifecycle.yml)
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/leap-motion/refs/heads/main/conformance/leap-motion-conformance.yml)
+- [Components (TouchFree)](https://raw.githubusercontent.com/api-evangelist/leap-motion/refs/heads/main/components/leap-motion-components.yml)
+
+## Company
+- [Ultraleap website](https://www.ultraleap.com/)
+- [Products](https://www.ultraleap.com/products/)
+- [Downloads](https://www.ultraleap.com/downloads/)
+- [GitHub organization](https://github.com/ultraleap)
+- [Discord community](https://discord.com/invite/3VCndThqxS)

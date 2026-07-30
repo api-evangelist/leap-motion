@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  apis.yml + https://github.com/ultraleap (OpenXRHandTracking / UnrealPlugin /
+  UnityPlugin) — first-party plugin surface
+notes: >-
+  LeapC is a native hand-tracking API, so the usual web/security standards
+  (OAuth2, OIDC, RFC 9457, JSON:API, PSD2, FHIR, SCIM) do not apply and are marked
+  conforms:false. The meaningful cross-cutting standard for this provider is the
+  Khronos OpenXR runtime interface: Ultraleap ships an OpenXR API layer / hand
+  tracking extension support (XR_EXT_hand_tracking) so its tracking is consumable
+  through the OpenXR standard. This is a derived assertion from the published
+  first-party plugin surface, not a formal certification claim.
+standards:
+- id: openxr
+  conforms: true
+  evidence: Ultraleap ships an OpenXR API layer and OpenXR hand-tracking plugins (docs.ultraleap.com/openxr, github.com/ultraleap).
+- id: openxr-hand-tracking-ext
+  conforms: true
+  evidence: Supports XR_EXT_hand_tracking joint model via the OpenXR hand tracking layer.
+- id: oauth2
+  conforms: false
+  evidence: Native local IPC API; no OAuth surface.
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Uses native eLeapRS result enum, not HTTP problem+json.
+- id: json-api
+  conforms: false
+- id: fhir-r4
+  conforms: false
+- id: scim2
+  conforms: false
+- id: odata
+  conforms: false

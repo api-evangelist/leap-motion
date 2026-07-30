@@ -1,0 +1,79 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/ultraleap
+notes: >-
+  Leap Motion / Ultraleap does not distribute a hosted-API client library. Its
+  first-party packages are game-engine plugins and native/language bindings for
+  the LeapC hand tracking API. Registry coverage is therefore Unity UPM/OpenUPM
+  and GitHub source releases rather than npm/PyPI. Probed and NOT found as
+  first-party: PyPI (leap / leapc-python / leapc-cffi / leapmotion / ultraleap
+  all absent or unrelated), npm @ultraleap/* (404).
+packages:
+- language: csharp
+  platform: unity
+  registry: openupm
+  name: com.ultraleap.tracking
+  version: 7.3.0
+  url: https://openupm.com/packages/com.ultraleap.tracking/
+  install: openupm add com.ultraleap.tracking
+  repository: https://github.com/ultraleap/UnityPlugin
+  license: Apache-2.0
+  official: true
+- language: csharp
+  platform: unity
+  registry: openupm
+  name: com.ultraleap.tracking.preview
+  url: https://package.openupm.com/com.ultraleap.tracking.preview
+  install: openupm add com.ultraleap.tracking.preview
+  repository: https://github.com/ultraleap/UnityPlugin
+  license: Apache-2.0
+  official: true
+- language: cpp
+  platform: unreal-engine
+  registry: github
+  name: UnrealPlugin
+  version: v5.0.1
+  url: https://github.com/ultraleap/UnrealPlugin
+  install: git clone https://github.com/ultraleap/UnrealPlugin.git
+  official: true
+- language: python
+  registry: github
+  name: leapc-python-api
+  url: https://github.com/ultraleap/leapc-python-bindings
+  install: pip install -e leapc-python-api
+  notes: >-
+    Source-install only; depends on the compiled leapc_cffi module shipped with
+    the Ultraleap tracking software (Gemini 5.17+). Not published to PyPI.
+  license: Apache-2.0
+  official: true
+- language: typescript
+  registry: github
+  name: TouchFreeWebTooling
+  url: https://github.com/ultraleap/TouchFreeWebTooling
+  install: git clone https://github.com/ultraleap/TouchFreeWebTooling.git
+  official: true
+- language: csharp
+  platform: unity
+  registry: github
+  name: TouchFreeUnityTooling
+  url: https://github.com/ultraleap/TouchFreeUnityTooling
+  official: true
+- language: python
+  registry: github
+  name: leapc-cffi
+  url: https://github.com/ultraleap/leapc-python-bindings
+  notes: Compiled CFFI binding to LeapC, bundled with the tracking software install.
+  official: true
+- language: javascript
+  registry: npm
+  name: leapjs
+  version: 1.1.1
+  url: https://www.npmjs.com/package/leapjs
+  install: npm install leapjs
+  repository: https://github.com/leapmotion/leapjs
+  official: true
+  status: legacy
+  notes: >-
+    Original first-party Leap Motion JavaScript client. The websocket surface it
+    talks to was removed in Ultraleap Gemini V5; ultraleap/UltraleapTrackingWebSocket
+    restores partial v6-protocol compatibility.

@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://github.com/ultraleap (TouchFreeWebTooling, TouchFreeUnityTooling,
+  UnityPlugin) + https://docs.ultraleap.com/touchfree/
+notes: >-
+  Distinct from the server-side/native SDK bindings in packages/. Ultraleap ships
+  client-side interaction component libraries — primarily the TouchFree family,
+  which turns hand tracking into touchless cursor/interaction input for existing
+  UIs — plus interaction/UI prefab component sets inside the Unity plugin.
+component_families:
+- family: TouchFree
+  description: Touchless interaction layer that maps hand tracking to on-screen cursor input for kiosks and existing UIs.
+  components:
+  - name: TouchFree Web Tooling
+    kind: web-library
+    language: typescript
+    loader: https://github.com/ultraleap/TouchFreeWebTooling
+    description: JavaScript/TypeScript tooling to add touchless input to web pages and web apps.
+  - name: TouchFree Unity Tooling
+    kind: unity-package
+    language: csharp
+    loader: https://github.com/ultraleap/TouchFreeUnityTooling
+    description: Unity tooling to add touchless interaction to Unity applications.
+  docs: https://docs.ultraleap.com/touchfree/
+- family: Unity Interaction Engine / UI Input
+  description: Prefab and component set for physics-based hand interaction and UI input in Unity.
+  components:
+  - name: Interaction Engine
+    kind: unity-package
+    language: csharp
+    loader: https://github.com/ultraleap/UnityPlugin
+    description: Hand-object interaction (grasp, hover, contact) components and UI input modules for Unity.
+  docs: https://docs.ultraleap.com/unity-api/
