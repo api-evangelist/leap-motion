@@ -90,6 +90,8 @@ apis:
   - type: Documentation
     url: https://github.com/ultraleap/UltraleapTrackingWebSocket/blob/main/README.md
 common:
+- type: IssueTracker
+  url: https://github.com/ultraleap/UltraleapTrackingWebSocket/issues
 - type: DomainSecurity
   url: security/leap-motion-domain-security.yml
 - type: Website
