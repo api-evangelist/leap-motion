@@ -9,6 +9,18 @@ description: 'Leap Motion is the hand-tracking company behind the Leap Motion Co
   as polled messages, plus first-party plugins for Unity, Unreal, OpenXR and Python.
   The original leapmotion.com and developer.leapmotion.com domains no longer resolve;
   docs.ultraleap.com and github.com/ultraleap are the live developer surfaces.'
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
